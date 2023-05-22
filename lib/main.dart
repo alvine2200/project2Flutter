@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './home_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -30,6 +31,7 @@ class _RootPageState extends State<RootPage> {
       appBar: AppBar(
         title: const Text('Hello World'),
       ),
+      body: const Homepage(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint('Floating Action Button');
