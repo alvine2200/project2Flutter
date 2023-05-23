@@ -14,6 +14,9 @@ class ProfilePage extends StatelessWidget {
           title: Text('Text ${(index + 1)}'),
           leading: const Icon(Icons.person),
           trailing: const Icon(Icons.select_all_sharp),
+          onTap: () {
+            debugPrint('This is index ${(index)} selected');
+          },
         );
       },
     );
