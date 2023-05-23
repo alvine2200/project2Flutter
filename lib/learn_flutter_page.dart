@@ -13,6 +13,24 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Learn Flutter'),
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
+      body: Column(
+        children: [
+          Image.asset('images/sky.jpeg'),
+          const SizedBox(
+            height: 10,
+          ),
+          const Divider(
+            color: Colors.black,
+          ),
+        ],
       ),
     );
   }
