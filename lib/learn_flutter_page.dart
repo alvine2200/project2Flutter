@@ -23,12 +23,43 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
       ),
       body: Column(
         children: [
-          Image.asset('images/sky.jpeg'),
+          Image.asset(
+            'images/sky.jpeg',
+          ),
           const SizedBox(
             height: 10,
           ),
           const Divider(
             color: Colors.black,
+          ),
+          Container(
+            color: Colors.blueGrey,
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10),
+            child: const Center(
+              child: Text(
+                'Testing Container',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              debugPrint('elevated button shit');
+            },
+            child: const Text('Elevated Button'),
+          ),
+          OutlinedButton(
+            onPressed: () {
+              debugPrint('Outlined button shit');
+            },
+            child: const Text('Outlined Button'),
+          ),
+          TextButton(
+            onPressed: () {
+              debugPrint('Text button shit');
+            },
+            child: const Text('Text Button'),
           ),
         ],
       ),
