@@ -8,6 +8,7 @@ class LearnFlutterPage extends StatefulWidget {
 }
 
 class _LearnFlutterPageState extends State<LearnFlutterPage> {
+  bool isSwitch = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,6 +62,28 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             },
             child: const Text('Text Button'),
           ),
+          GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: () {
+              debugPrint('This is the row');
+            },
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.local_fire_department),
+                Text('footer page'),
+                Icon(Icons.local_fire_department),
+              ],
+            ),
+          ),
+          Switch(
+            value: isSwitch,
+            onChanged: (bool newBool) {
+              setState(() {
+                isSwitch = newBool;
+              });
+            },
+          )
         ],
       ),
     );
